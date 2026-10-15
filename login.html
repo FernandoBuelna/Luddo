@@ -62,20 +62,33 @@
           <a href="index.html">← Volver a la tienda</a>
           <h2>Iniciar sesión</h2>
           <p class="subtle">Ingresa tus datos para continuar.</p>
-          <form class="form-stack">
-            <label
-              >Correo electrónico<input
+          <form class="form-stack" id="form-login">
+            <label>
+              Correo electrónico
+              <input
                 type="email"
-                name="correoelectrnico"
-                placeholder="nombre@correo.com" /></label
-            ><label
-              >Contraseña<input
+                id="correo-login"
+                name="correoElectronico"
+                placeholder="nombre@correo.com"
+                required
+              />
+            </label>
+
+            <label>
+              Contraseña
+              <input
                 type="password"
-                name="contrasea"
-                placeholder="" /></label
-            ><label><input type="checkbox" /> Recordarme</label
-            ><a href="#">¿Olvidaste tu contraseña?</a
-            ><button type="button" class="btn btn-primary">
+                id="contrasena-login"
+                name="contrasena"
+                required
+              />
+            </label>
+
+            <a href="#">¿Olvidaste tu contraseña?</a>
+
+            <p id="mensaje-login"></p>
+
+            <button type="submit" class="btn btn-primary">
               Iniciar sesión
             </button>
           </form>
@@ -95,5 +108,6 @@
         </div>
       </div>
     </footer>
+    <script src="scripts/autenticacion.js"></script>
   </body>
 </html>
