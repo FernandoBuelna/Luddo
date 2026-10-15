@@ -2869,3 +2869,24 @@ textarea {
     height: 145px;
   }
 }
+
+.form-stack .check-opcion {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  width: 100%;
+}
+
+.form-stack .check-opcion input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  padding: 0;
+  flex: 0 0 auto;
+}
+
+.form-stack .check-opcion span {
+  display: inline;
+}
