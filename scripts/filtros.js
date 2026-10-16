@@ -3,8 +3,9 @@ function filtrarProductos(productos, filtros) {
     const cumpleEdad = filtrarEdad(producto, filtros.edades);
     const cumpleJugadores = filtrarJugadores(producto, filtros.jugadores);
     const cumpleDuracion = filtrarDuracion(producto, filtros.duraciones);
+    const cumpleCategoria = filtrarCategoria(producto, filtros.categorias);
 
-    return cumpleEdad && cumpleJugadores && cumpleDuracion;
+    return cumpleEdad && cumpleJugadores && cumpleDuracion && cumpleCategoria;
   });
 }
 
@@ -97,6 +98,32 @@ function filtrarDuracion(producto, duraciones) {
   });
 }
 
+function filtrarCategoria(producto, categorias) {
+  if (categorias.length === 0) {
+    return true;
+  }
+
+  const equivalencias = {
+    "Juegos de mesa": [
+      "clasicos",
+      "estrategia",
+      "familiares",
+      "infantiles",
+      "party",
+      "tematicos",
+    ],
+    Rompecabezas: ["rompecabezas"],
+    Estrategia: ["estrategia"],
+    Educativos: ["educativos"],
+    Familiares: ["familiares"],
+  };
+
+  return categorias.some((categoria) => {
+    const categoriasValidas = equivalencias[categoria] || [];
+    return categoriasValidas.includes(producto.categoria);
+  });
+}
+
 function obtenerFiltrosSeleccionados() {
   const edades = Array.from(
     document.querySelectorAll('input[name="edadrecomendada"]:checked'),
@@ -110,9 +137,14 @@ function obtenerFiltrosSeleccionados() {
     document.querySelectorAll('input[name="duracin"]:checked'),
   ).map((input) => input.value);
 
+  const categorias = Array.from(
+    document.querySelectorAll('input[name="categora"]:checked'),
+  ).map((input) => input.value);
+  
   return {
     edades,
     jugadores,
     duraciones,
+    categorias,
   };
 }

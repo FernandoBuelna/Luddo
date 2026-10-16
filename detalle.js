@@ -1,256 +1,291 @@
-//PR0DUTOS ACTUALES
+// Catálogo de productos de Luddo.
+// Base inicial desarrollada por Manuel y adaptada durante la integración final.
+
 const productos = [
-    // CLASICOS
-    {
-        id: 1,
-        nombre: "Ajedrez de Madera",
-        categoria: "clasicos",
-        precio: 350.00,
-        imagen: "https://i.pinimgc.com/originals/95/df/89/95df89d280b9fc2fecc61c4222884d71.jpg",
-        descripcion: "Elegante juego de ajedrez con tablero y piezas talladas en madera barnizada.",
-        jugadores: "2 jug.",
-        duracion: "30-60 min",
-        edad: "+6 años"
-    },
-    {
-        id: 2,
-        nombre: "Jenga",
-        categoria: "clasicos",
-        precio: 280.00,
-        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUXLyp1_oQPlHP_q6muoFaheO249fbOs7rjPeAJaBY9g&s=10",
-        descripcion: "Mantén el pulso firme. Retira bloques de madera uno a uno sin derribar la torre.",
-        jugadores: "1+ jug.",
-        duracion: "15 min",
-        edad: "+6 años"
-    },
-    {
-        id: 3,
-        nombre: "Dominó de Madera",
-        categoria: "clasicos",
-        precio: 200.00,
-        imagen: "https://casaldisenos.fic-cortelaser.mx/wp-content/uploads/2024/08/photo_2024-09-11_09-07-15.jpg",
-        descripcion: "Juego tradicional de dominó con fichas de madera en estuche de colección.",
-        jugadores: "2-4 jug.",
-        duracion: "30 min",
-        edad: "+6 años"
-    },
-
-    // ESTRATEGIA
-    {
-        id: 4,
-        nombre: "Código Secreto",
-        categoria: "estrategia",
-        precio: 420.00,
-        imagen: "https://m.media-amazon.com/images/I/61s+XrXKl1L._AC_SL1200_.jphttps://m.media-amazon.com/images/I/71cdMOURE9L._AC_UL480_FMwebp_QL65_.jpg",
-        descripcion: "Juego de pistas y deducción donde dos jefes de espías conocen la identidad de cada agente.",
-        jugadores: "2-8 jug.",
-        duracion: "15 min",
-        edad: "+14 años"
-    },
-    {
-        id: 5,
-        nombre: "Leonardo Da Vinci Rompecabezas",
-        categoria: "estrategia",
-        precio: 380.00,
-        imagen: "https://tse4.mm.bing.net/th/id/OIP.LzRa2nkYaz2wqPpj7LemcwHaF7?r=0&pid=Api&h=220&P=0",
-        descripcion: "Desafío mental inspirado en los inventos y bocetos de Leonardo Da Vinci.",
-        jugadores: "1 jug.",
-        duracion: "45 min",
-        edad: "+12 años"
-    },
-    {
-        id: 6,
-        nombre: "Taco,Gato,Cabra,Queso",
-        categoria: "estrategia",
-        precio: 400.00,
-        imagen: "https://m.media-amazon.com/images/I/51e38iVY9eL._AC_SL1000_.jpg",
-        descripcion: "juego de cartas donde podrán jugar de 3 a 8 jugadores, es perfecto para jugar en familia o con amigos y pasa un buen rato de risas y diversión en compañia.",
-        jugadores: "3-8 jug.",
-        duracion: "45 min",
-        edad: "+10 años"
-    },
-
-   // INFANTILES
-    {
-        id: 7,
-        nombre: "Pulgas Locas",
-        categoria: "infantiles",
-        precio: 310.00,
-        imagen: "https://m.media-amazon.com/images/I/61s+XrXKl1L._AC_SL1200_.jpg",
-        descripcion: "Atrapa con tu pinza a todas las pulgas que brincan en la cama antes que los demás.",
-        jugadores: "2-4 jug.",
-        duracion: "15 min",
-        edad: "+4 años"
-    },
-    {
-        id: 8,
-        nombre: "Serpientes y Escaleras",
-        categoria: "infantiles",
-        precio: 180.00,
-        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_gB41cI0DbMsViY0MMHF-n93rJWDuLGHTMkSfMyQBbw&s=10",
-        descripcion: "Lanza el dado, sube por las escaleras y evita caer por la boca de las serpientes.",
-        jugadores: "2-4 jug.",
-        duracion: "20 min",
-        edad: "+3 años"
-    },
-    {
-        id: 9,
-        nombre: "Monos Locos",
-        categoria: "infantiles",
-        precio: 460.00,
-        imagen: "https://m.media-amazon.com/images/I/81XVk+u89CL._AC_SL1500_.jpg",
-        descripcion: "El set incluye figuras de animalitos adorables: monos dorados, lémures y perezosos. ¡Cada uno aporta un toque especial al juego y hace que cada partida sea visualmente divertida y llena de personalidad!",
-        jugadores: "5 jug.",
-        duracion: "45 min",
-        edad: "+2 años"
-    },
-        
-    // FAMILIARES
-    {
-        id: 10,
-        nombre: "Lotería Mexicana",
-        categoria: "familiares",
-        precio: 150.00,
-        imagen: "https://tse1.mm.bing.net/th/id/OIP.9peEiaw3KGcASIHDUh9HVwHaJE?r=0&pid=Api&h=220&P=0",
-        descripcion: "Tradicional juego de mesa mexicano con cartas ilustradas y fichas.",
-        jugadores: "2-10 jug.",
-        duracion: "20 min",
-        edad: "+4 años"
-    },
-    {
-        id: 11,
-        nombre: "Toma Todo",
-        categoria: "familiares",
-        precio: 90.00,
-        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHt9CWxzVUGxT-frcLcDWz4BB5bhsugnpIJ2iCPvBwug&s=10",
-        descripcion: "Juego de pirinola tradicional para convivir y divertirse en familia.",
-        jugadores: "2-6 jug.",
-        duracion: "15 min",
-        edad: "+5 años"
-    },
-    {
-        id:12,
-        nombre: "Virus! 2",
-        categoria: "familiares",
-        precio: 290.00,
-        imagen: "https://tse4.mm.bing.net/th/id/OIP.syKlNXmVbJiFPvxtEFe-bAHaHa?r=0&pid=Api&h=220&P=0",
-        descripcion: "Expansión del contagioso juego de cartas. Enfrenta nuevos virus evolucionados y medicamentos.",
-        jugadores: "2-6 jug.",
-        duracion: "20 min",
-        edad: "+8 años"
-    },
-
-    // DE FIESTA
-    {
-        id: 13,
-        nombre: "Hitster",
-        categoria: "fiesta",
-        precio: 490.00,
-        imagen: "https://tse4.mm.bing.net/th/id/OIP.q_AWcvNAIzBvlljAqDbTXQHaKy?r=0&pid=Api&h=220&P=0",
-        descripcion: "El juego de cartas musical definitivo. Escucha más de 100 años de éxitos y ordénalos en tu línea de tiempo.",
-        jugadores: "2-10 jug.",
-        duracion: "30 min",
-        edad: "+16 años"
-    },
-    {
-        id: 14,
-        nombre: "Mariachi Loco",
-        categoria: "fiesta",
-        precio: 320.00,
-        imagen: "https://m.media-amazon.com/images/I/613+PRxVAzL._AC_SL1080_.jpg",
-        descripcion: "Juego rápido de cartas y dinamismo para ambientar cualquier reunión entre amigos.",
-        jugadores: "3-8 jug.",
-        duracion: "20 min",
-        edad: "+12 años"
-    },
-    {
-        id: 15,
-        nombre: "Metrópoli",
-        categoria: "fiesta",
-        precio: 400.00,
-        imagen: "https://m.media-amazon.com/images/I/61YUfCT0ffL._AC_SL1500_.jpg",
-        descripcion: "Negocia, compra propiedades y compite con tus amigos en un ambiente de fiesta.",
-        jugadores: "2-6 jug.",
-        duracion: "45 min",
-        edad: "+10 años"
-    }
+  {
+    id: 1,
+    nombre: "Ajedrez de Madera",
+    categoria: "clasicos",
+    precio: 499,
+    stock: 15,
+    edadMinima: 6,
+    jugadoresMin: 2,
+    jugadoresMax: 2,
+    duracionMinutos: 45,
+    disponibilidad: "DISPONIBLE",
+    imagen:
+      "https://i.pinimg.com/originals/95/df/89/95df89d280b9fc2fecc61c4222884d71.jpg",
+    descripcion: "Juego clásico de estrategia con tablero y piezas de madera.",
+  },
+  {
+    id: 2,
+    nombre: "Jenga",
+    categoria: "familiares",
+    precio: 399,
+    stock: 20,
+    edadMinima: 6,
+    jugadoresMin: 1,
+    jugadoresMax: 8,
+    duracionMinutos: 20,
+    disponibilidad: "DISPONIBLE",
+    imagen:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUXLyp1_oQPlHP_q6muoFaheO249fbOs7rjPeAJaBY9g&s=10",
+    descripcion:
+      "Retira los bloques uno por uno y colócalos en la parte superior sin derribar la torre.",
+  },
+  {
+    id: 3,
+    nombre: "Dominó de Madera",
+    categoria: "clasicos",
+    precio: 249,
+    stock: 18,
+    edadMinima: 6,
+    jugadoresMin: 2,
+    jugadoresMax: 4,
+    duracionMinutos: 30,
+    disponibilidad: "DISPONIBLE",
+    imagen:
+      "https://casaldisenos.fic-cortelaser.mx/wp-content/uploads/2024/08/photo_2024-09-11_09-07-15.jpg",
+    descripcion: "Tradicional juego de dominó con fichas de madera.",
+  },
+  {
+    id: 4,
+    nombre: "Código Secreto",
+    categoria: "estrategia",
+    precio: 549,
+    stock: 12,
+    edadMinima: 10,
+    jugadoresMin: 4,
+    jugadoresMax: 8,
+    duracionMinutos: 20,
+    disponibilidad: "DISPONIBLE",
+    imagen:
+      "https://m.media-amazon.com/images/I/71cdMOURE9L._AC_UL480_FMwebp_QL65_.jpg",
+    descripcion:
+      "Juego de pistas y deducción en el que los equipos intentan encontrar a sus agentes.",
+  },
+  {
+    id: 5,
+    nombre: "Taco Gato Cabra Queso Pizza",
+    categoria: "party",
+    precio: 299,
+    stock: 25,
+    edadMinima: 8,
+    jugadoresMin: 2,
+    jugadoresMax: 8,
+    duracionMinutos: 15,
+    disponibilidad: "DISPONIBLE",
+    imagen: "https://m.media-amazon.com/images/I/51e38iVY9eL._AC_SL1000_.jpg",
+    descripcion:
+      "Juego rápido de cartas, reflejos y diversión para jugar con familia o amigos.",
+  },
+  {
+    id: 6,
+    nombre: "Lotería Mexicana Tradicional",
+    categoria: "familiares",
+    precio: 199,
+    stock: 30,
+    edadMinima: 5,
+    jugadoresMin: 2,
+    jugadoresMax: 10,
+    duracionMinutos: 30,
+    disponibilidad: "DISPONIBLE",
+    imagen:
+      "https://tse1.mm.bing.net/th/id/OIP.9peEiaw3KGcASIHDUh9HVwHaJE?pid=Api",
+    descripcion:
+      "Tradicional juego mexicano con cartas ilustradas para disfrutar en familia.",
+  },
+  {
+    id: 7,
+    nombre: "Virus! 2",
+    categoria: "familiares",
+    precio: 279,
+    stock: 14,
+    edadMinima: 8,
+    jugadoresMin: 2,
+    jugadoresMax: 6,
+    duracionMinutos: 20,
+    disponibilidad: "DISPONIBLE",
+    imagen:
+      "https://tse4.mm.bing.net/th/id/OIP.syKlNXmVbJiFPvxtEFe-bAHaHa?pid=Api",
+    descripcion:
+      "Juego de cartas en el que nuevos virus y medicamentos complican cada partida.",
+  },
+  {
+    id: 8,
+    nombre: "Monos Locos",
+    categoria: "infantiles",
+    precio: 449,
+    stock: 10,
+    edadMinima: 5,
+    jugadoresMin: 2,
+    jugadoresMax: 4,
+    duracionMinutos: 20,
+    disponibilidad: "DISPONIBLE",
+    imagen: "https://m.media-amazon.com/images/I/81XVk+u89CL._AC_SL1500_.jpg",
+    descripcion:
+      "Juego infantil de habilidad donde debes evitar que los monos caigan.",
+  },
+  {
+    id: 9,
+    nombre: "Mona Lisa - Rompecabezas 500 piezas",
+    categoria: "rompecabezas",
+    precio: 349,
+    stock: 8,
+    edadMinima: 8,
+    jugadoresMin: null,
+    jugadoresMax: null,
+    duracionMinutos: null,
+    disponibilidad: "DISPONIBLE",
+    imagen:
+      "https://images.unsplash.com/photo-1611891487122-207579d67d98?auto=format&fit=crop&w=900&q=80",
+    descripcion:
+      "Rompecabezas de 500 piezas inspirado en la famosa obra Mona Lisa.",
+  },
+  {
+    id: 10,
+    nombre: "Galaxias: Edición Especial",
+    categoria: "tematicos",
+    precio: 699,
+    stock: 10,
+    edadMinima: 12,
+    jugadoresMin: 2,
+    jugadoresMax: 5,
+    duracionMinutos: 60,
+    disponibilidad: "PREVENTA",
+    imagen:
+      "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=900&q=80",
+    descripcion:
+      "Edición especial de temática espacial disponible en preventa.",
+  },
 ];
 
-// Referencias DOM
-const catalogoContainer = document.getElementById('catalogo');
-const modal = document.getElementById('modal-detalle');
-const detalleContainer = document.getElementById('detalle-producto');
-const btnCerrarModal = document.getElementById('cerrar-modal');
-const botonesFiltro = document.querySelectorAll('.btn-filtro');
+const listaProductos = document.getElementById("lista-productos");
+const totalProductos = document.getElementById("total-productos");
 
-// Render tarjeta
-function cargarCatalogo(listaProductos) {
-    catalogoContainer.innerHTML = '';
+function textoJugadores(producto) {
+  if (producto.jugadoresMin == null || producto.jugadoresMax == null) {
+    return "No aplica";
+  }
 
-    listaProductos.forEach(prod => {
-        const card = document.createElement('div');
-        card.classList.add('card');
-        
-        card.innerHTML = `
-            <img src="${prod.imagen}" alt="${prod.nombre}">
-            <div class="card-info">
-                <span class="card-categoria">${prod.categoria}</span>
-                <h3 class="card-title">${prod.nombre}</h3>
-                <p class="card-price">$${prod.precio.toFixed(2)}</p>
-                <button class="btn-detalle" onclick="mostrarDetalle(${prod.id})">Ver detalle</button>
-            </div>
-        `;
+  if (producto.jugadoresMin === producto.jugadoresMax) {
+    return `${producto.jugadoresMin} jugadores`;
+  }
 
-        catalogoContainer.appendChild(card);
-    });
+  return `${producto.jugadoresMin}-${producto.jugadoresMax} jugadores`;
 }
 
-// Filtro productos
-botonesFiltro.forEach(boton => {
-    boton.addEventListener('click', (e) => {
-        // Cambiar estado activo en botones
-        botonesFiltro.forEach(btn => btn.classList.remove('activo'));
-        e.target.classList.add('activo');
+function textoDuracion(producto) {
+  if (producto.duracionMinutos == null) {
+    return "Variable";
+  }
 
-        const cat = e.target.dataset.categoria;
-        
-        if (cat === 'todos') {
-            cargarCatalogo(productos);
-        } else {
-            const filtrados = productos.filter(p => p.categoria === cat);
-            cargarCatalogo(filtrados);
-        }
-    });
-});
+  return `${producto.duracionMinutos} min`;
+}
 
-// Mostrar detalle en modal
-function mostrarDetalle(idProducto) {
-    const prod = productos.find(p => p.id === idProducto);
-    if (!prod) return;
+function cargarCatalogo(lista = productos) {
+  if (!listaProductos) {
+    return;
+  }
 
-    detalleContainer.innerHTML = `
-        <div class="detalle-info">
-            <img src="${prod.imagen}" alt="${prod.nombre}">
-            <span class="card-categoria">${prod.categoria}</span>
-            <h2>${prod.nombre}</h2>
-            <p class="card-price">$${prod.precio.toFixed(2)}</p>
-            <p style="margin: 0.8rem 0;">${prod.descripcion}</p>
-            <div>
-                <span class="badge">👥 ${prod.jugadores}</span>
-                <span class="badge">⏱️ ${prod.duracion}</span>
-                <span class="badge">🎂 ${prod.edad}</span>
-            </div>
+  listaProductos.innerHTML = "";
+
+  lista.forEach((producto) => {
+    const tarjeta = document.createElement("article");
+
+    tarjeta.className = "product-card";
+    tarjeta.dataset.productoId = producto.id;
+    tarjeta.dataset.nombre = producto.nombre;
+    tarjeta.dataset.precio = producto.precio;
+    tarjeta.dataset.imagen = producto.imagen;
+
+    tarjeta.innerHTML = `
+      <img
+        src="${producto.imagen}"
+        alt="${producto.nombre}"
+        loading="lazy"
+      >
+
+      <div class="product-card-body">
+        <span class="eyebrow">${producto.categoria}</span>
+
+        <h3>${producto.nombre}</h3>
+
+        <p class="subtle">
+          Edad: ${producto.edadMinima}+ |
+          ${textoJugadores(producto)} |
+          ${textoDuracion(producto)}
+        </p>
+
+        <strong>$${producto.precio.toFixed(2)} MXN</strong>
+
+        <p class="subtle">
+          Stock: ${producto.stock}
+          ${producto.disponibilidad === "PREVENTA" ? " | PREVENTA" : ""}
+        </p>
+
+        <div class="product-actions">
+          <a
+            class="btn btn-outline"
+            href="producto.html?id=${producto.id}"
+          >
+            Ver detalle
+          </a>
+
+          <button
+            type="button"
+            class="btn"
+            data-agregar-carrito
+          >
+            Agregar al carrito
+          </button>
         </div>
+      </div>
     `;
 
-    modal.classList.remove('oculto');
+    listaProductos.appendChild(tarjeta);
+  });
+
+  if (totalProductos) {
+    totalProductos.textContent = `${lista.length} producto${lista.length === 1 ? "" : "s"}`;
+  }
 }
 
+function aplicarFiltros() {
+  if (typeof obtenerFiltrosSeleccionados !== "function") {
+    cargarCatalogo(productos);
+    return;
+  }
 
-btnCerrarModal.addEventListener('click', () => modal.classList.add('oculto'));
-window.addEventListener('click', (e) => {
-    if (e.target === modal) modal.classList.add('oculto');
+  const filtros = obtenerFiltrosSeleccionados();
+  const productosFiltrados = filtrarProductos(productos, filtros);
+
+  cargarCatalogo(productosFiltrados);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  cargarCatalogo(productos);
+
+  const controlesFiltro = document.querySelectorAll(
+    'input[name="edadrecomendada"], ' +
+      'input[name="nmerodejugadores"], ' +
+      'input[name="duracin"], ' +
+      'input[name="categora"]',
+  );
+
+  controlesFiltro.forEach((control) => {
+    control.addEventListener("change", aplicarFiltros);
+  });
+
+  const botonLimpiar = document.querySelector(".filters .btn-outline");
+
+  if (botonLimpiar) {
+    botonLimpiar.addEventListener("click", () => {
+      controlesFiltro.forEach((control) => {
+        control.checked = false;
+      });
+
+      cargarCatalogo(productos);
+    });
+  }
 });
-
-// Cargar catálogo
-document.addEventListener('DOMContentLoaded', () => cargarCatalogo(productos));
