@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Carrito | Luddo Store</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="carrito.js" defer></script>
   </head>
   <body>
     <div class="topbar">
@@ -46,14 +47,7 @@
         <div class="cart-layout-static section-pad">
           <section class="panel">
             <h2>Productos agregados</h2>
-            <div id="items-carrito">
-              <div class="empty-space" data-template="empty">
-                <div>
-                  <strong>Sin contenido todavía</strong>
-                  <p>Los productos elegidos aparecerán aquí.</p>
-                </div>
-              </div>
-            </div>
+            <div id="items-carrito"></div>
             <a class="btn btn-ghost" href="catalogo.html"
               >← Continuar comprando</a
             >
@@ -61,21 +55,26 @@
           <aside class="panel">
             <h2>Resumen del pedido</h2>
             <div class="summary-row">
-              <span>Subtotal</span><strong id="subtotal">—</strong>
+              <span>Subtotal</span>
+              <strong id="subtotal">$0.00</strong>
             </div>
             <div class="summary-row">
-              <span>Envío</span><strong id="envio">—</strong>
+              <span>Envío</span>
+              <strong id="envio">Por definir</strong>
             </div>
             <div class="summary-row">
-              <span>Descuento</span><strong id="descuento">—</strong>
+              <span>Descuento</span>
+              <strong id="descuento">$0.00</strong>
             </div>
             <label class="form-stack section-pad"
               >Cupón<input class="field" placeholder="Código de descuento"
             /></label>
             <div class="summary-row">
-              <strong>Total</strong><strong id="total">—</strong>
+              <strong>Total</strong>
+              <strong id="total">$0.00</strong>
             </div>
             <a
+              id="ir-checkout"
               class="btn btn-primary"
               style="width: 100%; margin-top: 20px"
               href="checkout.html"

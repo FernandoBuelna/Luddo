@@ -2869,3 +2869,27 @@ textarea {
     height: 145px;
   }
 }
+/* PRODUCTOS DEL CARRITO */
+.cart-producto {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.cart-producto h3 {
+  margin: 0;
+}
+
+.cart-producto p {
+  margin: 0;
+}
+
+.cart-producto input {
+  width: 90px;
+}
+
+.cart-producto button {
+  align-self: flex-start;
+}
