@@ -227,7 +227,7 @@ function cargarCatalogo(lista = productos) {
         <div class="product-actions">
           <a
             class="btn btn-outline"
-            href="producto.html?id=${producto.id}"
+            href="detalle.html?id=${producto.id}"
           >
             Ver detalle
           </a>
@@ -289,3 +289,90 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+function cargarDetalleProducto() {
+  const nombreElemento = document.getElementById("nombre-producto");
+
+  // Si este elemento no existe, estamos en el catálogo y no en detalle.html.
+  if (!nombreElemento) {
+    return;
+  }
+
+  const parametros = new URLSearchParams(window.location.search);
+  const idProducto = Number(parametros.get("id"));
+
+  const producto = productos.find((p) => p.id === idProducto);
+
+  if (!producto) {
+    nombreElemento.textContent = "Producto no encontrado";
+    document.getElementById("descripcion-corta").textContent =
+      "No se encontró el producto solicitado.";
+    return;
+  }
+
+  document.title = `${producto.nombre} | Luddo Store`;
+
+  document.getElementById("categoria-producto").textContent =
+    producto.categoria;
+
+  nombreElemento.textContent = producto.nombre;
+
+  document.getElementById("descripcion-corta").textContent =
+    producto.descripcion;
+
+  document.getElementById("precio-producto").textContent =
+    `$${producto.precio.toFixed(2)} MXN`;
+
+  document.getElementById("edad-producto").textContent =
+    `${producto.edadMinima}+ años`;
+
+  document.getElementById("jugadores-producto").textContent =
+    textoJugadores(producto);
+
+  document.getElementById("duracion-producto").textContent =
+    textoDuracion(producto);
+
+  document.getElementById("dificultad-producto").textContent =
+    "No especificada";
+
+  document.getElementById("stock-producto").textContent =
+    producto.disponibilidad === "PREVENTA"
+      ? `Preventa · Stock: ${producto.stock}`
+      : `Disponible · Stock: ${producto.stock}`;
+
+  document.getElementById("descripcion-producto").textContent =
+    producto.descripcion;
+
+  const contenedorImagen = document.getElementById("imagen-producto");
+  contenedorImagen.innerHTML = `
+    <img
+      class="demo-img"
+      src="${producto.imagen}"
+      alt="${producto.nombre}"
+    >
+  `;
+
+  const galeria = document.getElementById("galeria");
+  if (galeria) {
+    galeria.style.display = "none";
+  }
+
+  const botonCarrito = document.querySelector("[data-agregar-carrito]");
+
+  if (botonCarrito) {
+    const contenedorProducto = botonCarrito.closest(".panel");
+
+    contenedorProducto.dataset.productoId = producto.id;
+    contenedorProducto.dataset.nombre = producto.nombre;
+    contenedorProducto.dataset.precio = producto.precio;
+    contenedorProducto.dataset.imagen = producto.imagen;
+  }
+
+  const espacioVacio = document.querySelector('[data-template="empty"]');
+
+  if (espacioVacio) {
+    espacioVacio.style.display = "none";
+  }
+}
+
+document.addEventListener("DOMContentLoaded", cargarDetalleProducto);
