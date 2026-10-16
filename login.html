@@ -7,10 +7,6 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="topbar">
-      Envío gratis en compras mayores a $999 MXN <span>•</span> Compra segura y
-      protegida
-    </div>
     <header class="header">
       <div class="header-main">
         <a class="logo" href="index.html" aria-label="Luddo Store"
@@ -32,11 +28,12 @@
         </div>
       </div>
       <nav>
-        <a href="index.html">Inicio</a><a href="catalogo.html">Catálogo</a
-        ><a href="catalogo.html">Juegos de mesa</a
-        ><a href="catalogo.html">Rompecabezas</a
-        ><a href="catalogo.html">Ofertas</a
-        ><a href="cuenta.html">Mis pedidos</a>
+        <a href="index.html">Inicio</a>
+        <a href="catalogo.html">Catálogo</a>
+        <a href="catalogo.html?categoria=Juegos%20de%20mesa">Juegos de mesa</a>
+        <a href="catalogo.html?categoria=Rompecabezas">Rompecabezas</a>
+        <a href="catalogo.html?categoria=Estrategia">Estrategia</a>
+        <a href="cuenta.html">Mis pedidos</a>
       </nav>
     </header>
     <main class="auth-static">
@@ -61,20 +58,33 @@
           <a href="index.html">← Volver a la tienda</a>
           <h2>Iniciar sesión</h2>
           <p class="subtle">Ingresa tus datos para continuar.</p>
-          <form class="form-stack">
-            <label
-              >Correo electrónico<input
+          <form class="form-stack" id="form-login">
+            <label>
+              Correo electrónico
+              <input
                 type="email"
-                name="correoelectrnico"
-                placeholder="nombre@correo.com" /></label
-            ><label
-              >Contraseña<input
+                id="correo-login"
+                name="correoElectronico"
+                placeholder="nombre@correo.com"
+                required
+              />
+            </label>
+
+            <label>
+              Contraseña
+              <input
                 type="password"
-                name="contrasea"
-                placeholder="" /></label
-            ><label><input type="checkbox" /> Recordarme</label
-            ><a href="#">¿Olvidaste tu contraseña?</a
-            ><button type="button" class="btn btn-primary">
+                id="contrasena-login"
+                name="contrasena"
+                required
+              />
+            </label>
+
+            <a href="#">¿Olvidaste tu contraseña?</a>
+
+            <p id="mensaje-login"></p>
+
+            <button type="submit" class="btn btn-primary">
               Iniciar sesión
             </button>
           </form>
@@ -94,5 +104,6 @@
         </div>
       </div>
     </footer>
+    <script src="scripts/autenticacion.js"></script>
   </body>
 </html>

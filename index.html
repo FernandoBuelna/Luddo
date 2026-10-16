@@ -7,10 +7,6 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="topbar">
-      Envío gratis en compras mayores a $999 MXN <span>•</span> Compra segura y
-      protegida
-    </div>
     <header class="header">
       <div class="header-main">
         <a class="logo" href="index.html" aria-label="Luddo Store"
@@ -32,11 +28,12 @@
         </div>
       </div>
       <nav>
-        <a href="index.html">Inicio</a><a href="catalogo.html">Catálogo</a
-        ><a href="catalogo.html">Juegos de mesa</a
-        ><a href="catalogo.html">Rompecabezas</a
-        ><a href="catalogo.html">Ofertas</a
-        ><a href="cuenta.html">Mis pedidos</a>
+        <a href="index.html">Inicio</a>
+        <a href="catalogo.html">Catálogo</a>
+        <a href="catalogo.html?categoria=Juegos%20de%20mesa">Juegos de mesa</a>
+        <a href="catalogo.html?categoria=Rompecabezas">Rompecabezas</a>
+        <a href="catalogo.html?categoria=Estrategia">Estrategia</a>
+        <a href="cuenta.html">Mis pedidos</a>
       </nav>
     </header>
     <main>
@@ -131,39 +128,78 @@
       </section>
       <section class="container home-block">
         <span class="eyebrow">CATÁLOGO</span>
-        <h2>Los favoritos de la comunidad</h2>
-        <div
-          class="visual-gallery"
-          aria-label="Fotografías ilustrativas de juegos"
-        >
-          <div class="visual-photo">
+        <h2>Productos destacados</h2>
+
+        <div class="product-grid">
+          <article class="product-card">
             <img
-              src="https://images.unsplash.com/photo-1629760946220-5693ee4c46ac?auto=format&fit=crop&w=1100&q=85"
-              alt="Fotografía ilustrativa de juegos de mesa"
+              src="https://i.pinimg.com/originals/95/df/89/95df89d280b9fc2fecc61c4222884d71.jpg"
+              alt="Ajedrez de Madera"
               loading="lazy"
             />
-          </div>
-          <div class="visual-photo">
+            <div class="product-card-body">
+              <span class="eyebrow">CLÁSICOS</span>
+              <h3>Ajedrez de Madera</h3>
+              <strong>$499.00 MXN</strong>
+              <a class="btn btn-outline" href="detalle.html?id=1">
+                Ver producto
+              </a>
+            </div>
+          </article>
+
+          <article class="product-card">
             <img
-              src="https://images.unsplash.com/photo-1506954673998-b077f05b13c7?auto=format&fit=crop&w=1100&q=85"
-              alt="Fotografía ilustrativa de juegos de mesa"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUXLyp1_oQPlHP_q6muoFaheO249fbOs7rjPeAJaBY9g&s=10"
+              alt="Jenga"
               loading="lazy"
             />
-          </div>
-          <div class="visual-photo">
+            <div class="product-card-body">
+              <span class="eyebrow">FAMILIARES</span>
+              <h3>Jenga</h3>
+              <strong>$399.00 MXN</strong>
+              <a class="btn btn-outline" href="detalle.html?id=2">
+                Ver producto
+              </a>
+            </div>
+          </article>
+
+          <article class="product-card">
             <img
-              src="https://images.unsplash.com/photo-1529699211952-734e80c4d42b?auto=format&fit=crop&w=1100&q=85"
-              alt="Fotografía ilustrativa de juegos de mesa"
+              src="https://m.media-amazon.com/images/I/71cdMOURE9L._AC_UL480_FMwebp_QL65_.jpg"
+              alt="Código Secreto"
               loading="lazy"
             />
-          </div>
-          <div class="visual-photo">
+            <div class="product-card-body">
+              <span class="eyebrow">ESTRATEGIA</span>
+              <h3>Código Secreto</h3>
+              <strong>$549.00 MXN</strong>
+              <a class="btn btn-outline" href="detalle.html?id=4">
+                Ver producto
+              </a>
+            </div>
+          </article>
+
+          <article class="product-card">
             <img
-              src="https://images.unsplash.com/photo-1706589398281-25f3563b3253?auto=format&fit=crop&w=1100&q=85"
-              alt="Fotografía ilustrativa de juegos de mesa"
+              src="https://tse4.mm.bing.net/th/id/OIP.syKlNXmVbJiFPvxtEFe-bAHaHa?pid=Api"
+              alt="Virus! 2"
               loading="lazy"
             />
-          </div>
+            <div class="product-card-body">
+              <span class="eyebrow">FAMILIARES</span>
+              <h3>Virus! 2</h3>
+              <strong>$279.00 MXN</strong>
+              <a class="btn btn-outline" href="detalle.html?id=7">
+                Ver producto
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <div class="detail-actions" style="margin-top: 24px">
+          <a class="btn btn-primary" href="catalogo.html">
+            Ver catálogo completo →
+          </a>
         </div>
       </section>
     </main>

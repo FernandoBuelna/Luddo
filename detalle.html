@@ -1,1 +1,151 @@
-
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Detalle del producto | Luddo Store</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-main">
+        <a class="logo" href="index.html" aria-label="Luddo Store"
+          ><span class="logo-image"
+            ><img src="assets/logo.png" alt="Luddo Store" /></span
+        ></a>
+        <form class="search" role="search">
+          <span>⌕</span
+          ><input
+            type="search"
+            name="q"
+            placeholder="¿Qué juego estás buscando?"
+            aria-label="Buscar juegos"
+          /><button type="button">Buscar</button>
+        </form>
+        <div class="header-actions">
+          <a href="login.html">♙<span>Mi cuenta</span></a
+          ><a href="carrito.html">🛒<span>Carrito</span></a>
+        </div>
+      </div>
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="catalogo.html">Catálogo</a>
+        <a href="catalogo.html?categoria=Juegos%20de%20mesa">Juegos de mesa</a>
+        <a href="catalogo.html?categoria=Rompecabezas">Rompecabezas</a>
+        <a href="catalogo.html?categoria=Estrategia">Estrategia</a>
+        <a href="cuenta.html">Mis pedidos</a>
+      </nav>
+    </header>
+    <main class="page-shell">
+      <div class="container">
+        <span class="eyebrow">LUDDO STORE</span>
+        <h1 class="page-title">Detalle del producto</h1>
+        <div class="detail-layout-static section-pad">
+          <section>
+            <div class="placeholder detail-main-image" id="imagen-producto">
+              <img
+                class="demo-img"
+                src="https://images.unsplash.com/photo-1606167668584-78701c57f13d?auto=format&fit=crop&w=1100&q=85"
+                alt="Imagen ilustrativa de juego de mesa"
+              />
+            </div>
+            <div class="detail-thumbnails" id="galeria">
+              <div class="placeholder">
+                <img
+                  class="demo-img"
+                  src="https://images.unsplash.com/photo-1629760946220-5693ee4c46ac?auto=format&fit=crop&w=1100&q=85"
+                  alt="Galería ilustrativa"
+                />
+              </div>
+              <div class="placeholder">
+                <img
+                  class="demo-img"
+                  src="https://images.unsplash.com/photo-1529699211952-734e80c4d42b?auto=format&fit=crop&w=1100&q=85"
+                  alt="Galería ilustrativa"
+                />
+              </div>
+              <div class="placeholder">
+                <img
+                  class="demo-img"
+                  src="https://images.unsplash.com/photo-1706589398281-25f3563b3253?auto=format&fit=crop&w=1100&q=85"
+                  alt="Galería ilustrativa"
+                />
+              </div>
+            </div>
+          </section>
+          <section class="panel">
+            <span class="eyebrow" id="categoria-producto">Categoría</span>
+            <h2 id="nombre-producto" style="font: 700 36px Fredoka">
+              Nombre del producto
+            </h2>
+            <p class="subtle" id="descripcion-corta">
+              Descripción del producto
+            </p>
+            <h2 id="precio-producto">$ — MXN</h2>
+            <div class="spec-grid-static">
+              <div class="spec">
+                <small>Edad</small><strong id="edad-producto">—</strong>
+              </div>
+              <div class="spec">
+                <small>Jugadores</small
+                ><strong id="jugadores-producto">—</strong>
+              </div>
+              <div class="spec">
+                <small>Duración</small><strong id="duracion-producto">—</strong>
+              </div>
+              <div class="spec">
+                <small>Dificultad</small
+                ><strong id="dificultad-producto">—</strong>
+              </div>
+            </div>
+            <p id="stock-producto" class="subtle">
+              Disponibilidad por consultar
+            </p>
+            <div class="detail-actions">
+              <input
+                class="field"
+                type="number"
+                min="1"
+                placeholder="Cantidad"
+                style="width: 110px"
+              />
+              <button
+                class="btn btn-primary"
+                type="button"
+                data-agregar-carrito
+              >
+                Agregar al carrito
+              </button>
+            </div>
+          </section>
+        </div>
+        <section class="panel section-pad">
+          <h2>Descripción y contenido</h2>
+          <div id="descripcion-producto" class="blank-line"></div>
+        </section>
+        <section class="section-pad">
+          <div class="empty-space" data-template="empty">
+            <div>
+              <strong>Sin contenido todavía</strong>
+              <p>Espacio para cargar contenido desde tu base de datos</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="footer-static">
+      <div class="container footer-inner">
+        <div>
+          <strong>LUDDO STORE</strong>
+          <p>La diversión comienza aquí.</p>
+        </div>
+        <div>
+          <a href="catalogo.html">Catálogo</a
+          ><a href="cuenta.html">Mis pedidos</a><a href="login.html">Acceder</a>
+        </div>
+      </div>
+    </footer>
+    <script src="scripts/carrito.js"></script>
+    <script src="scripts/detalle.js"></script>
+  </body>
+</html>

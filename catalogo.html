@@ -5,12 +5,9 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Catálogo | Luddo Store</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="scripts/carrito.js"></script>
   </head>
   <body>
-    <div class="topbar">
-      Envío gratis en compras mayores a $999 MXN <span>•</span> Compra segura y
-      protegida
-    </div>
     <header class="header">
       <div class="header-main">
         <a class="logo" href="index.html" aria-label="Luddo Store"
@@ -32,11 +29,12 @@
         </div>
       </div>
       <nav>
-        <a href="index.html">Inicio</a><a href="catalogo.html">Catálogo</a
-        ><a href="catalogo.html">Juegos de mesa</a
-        ><a href="catalogo.html">Rompecabezas</a
-        ><a href="catalogo.html">Ofertas</a
-        ><a href="cuenta.html">Mis pedidos</a>
+        <a href="index.html">Inicio</a>
+        <a href="catalogo.html">Catálogo</a>
+        <a href="catalogo.html?categoria=Juegos%20de%20mesa">Juegos de mesa</a>
+        <a href="catalogo.html?categoria=Rompecabezas">Rompecabezas</a>
+        <a href="catalogo.html?categoria=Estrategia">Estrategia</a>
+        <a href="cuenta.html">Mis pedidos</a>
       </nav>
     </header>
     <main class="page-shell">
@@ -196,110 +194,6 @@
               </select>
             </div>
             <div id="lista-productos" class="product-grid"></div>
-            <div
-              class="visual-gallery catalog-gallery"
-              aria-label="Galería visual; productos aún no registrados"
-            >
-              <div class="visual-photo">
-                <img
-                  src="https://images.unsplash.com/photo-1629760946220-5693ee4c46ac?auto=format&fit=crop&w=1100&q=85"
-                  alt="Imagen ilustrativa para futura ficha de producto"
-                  loading="lazy"
-                />
-                <div class="visual-photo-footer">
-                  <span class="skeleton-bar"></span
-                  ><span class="skeleton-bar short"></span>
-                </div>
-              </div>
-              <div class="visual-photo">
-                <img
-                  src="https://images.unsplash.com/photo-1606167668584-78701c57f13d?auto=format&fit=crop&w=1100&q=85"
-                  alt="Imagen ilustrativa para futura ficha de producto"
-                  loading="lazy"
-                />
-                <div class="visual-photo-footer">
-                  <span class="skeleton-bar"></span
-                  ><span class="skeleton-bar short"></span>
-                </div>
-              </div>
-              <div class="visual-photo">
-                <img
-                  src="https://images.unsplash.com/photo-1706589398281-25f3563b3253?auto=format&fit=crop&w=1100&q=85"
-                  alt="Imagen ilustrativa para futura ficha de producto"
-                  loading="lazy"
-                />
-                <div class="visual-photo-footer">
-                  <span class="skeleton-bar"></span
-                  ><span class="skeleton-bar short"></span>
-                </div>
-              </div>
-              <div class="visual-photo">
-                <img
-                  src="https://images.unsplash.com/photo-1529699211952-734e80c4d42b?auto=format&fit=crop&w=1100&q=85"
-                  alt="Imagen ilustrativa para futura ficha de producto"
-                  loading="lazy"
-                />
-                <div class="visual-photo-footer">
-                  <span class="skeleton-bar"></span
-                  ><span class="skeleton-bar short"></span>
-                </div>
-              </div>
-              <div class="visual-photo">
-                <img
-                  src="https://images.unsplash.com/photo-1506954673998-b077f05b13c7?auto=format&fit=crop&w=1100&q=85"
-                  alt="Imagen ilustrativa para futura ficha de producto"
-                  loading="lazy"
-                />
-                <div class="visual-photo-footer">
-                  <span class="skeleton-bar"></span
-                  ><span class="skeleton-bar short"></span>
-                </div>
-              </div>
-              <div class="visual-photo">
-                <img
-                  src="https://images.unsplash.com/photo-1642056446796-8c7d1dcb630b?auto=format&fit=crop&w=1100&q=85"
-                  alt="Imagen ilustrativa para futura ficha de producto"
-                  loading="lazy"
-                />
-                <div class="visual-photo-footer">
-                  <span class="skeleton-bar"></span
-                  ><span class="skeleton-bar short"></span>
-                </div>
-              </div>
-              <div class="visual-photo">
-                <img
-                  src="https://images.unsplash.com/photo-1611891487122-207579d67d98?auto=format&fit=crop&w=1100&q=85"
-                  alt="Imagen ilustrativa para futura ficha de producto"
-                  loading="lazy"
-                />
-                <div class="visual-photo-footer">
-                  <span class="skeleton-bar"></span
-                  ><span class="skeleton-bar short"></span>
-                </div>
-              </div>
-              <div class="visual-photo">
-                <img
-                  src="https://images.unsplash.com/photo-1695480542225-bc22cac128d0?auto=format&fit=crop&w=1100&q=85"
-                  alt="Imagen ilustrativa para futura ficha de producto"
-                  loading="lazy"
-                />
-                <div class="visual-photo-footer">
-                  <span class="skeleton-bar"></span
-                  ><span class="skeleton-bar short"></span>
-                </div>
-              </div>
-              <div class="visual-photo">
-                <img
-                  src="https://images.unsplash.com/photo-1706589398281-25f3563b3253?auto=format&fit=crop&w=1100&q=85"
-                  alt="Imagen ilustrativa para futura ficha de producto"
-                  loading="lazy"
-                />
-                <div class="visual-photo-footer">
-                  <span class="skeleton-bar"></span
-                  ><span class="skeleton-bar short"></span>
-                </div>
-              </div>
-            </div>
           </section>
         </div>
       </div>
@@ -316,5 +210,7 @@
         </div>
       </div>
     </footer>
+    <script src="scripts/filtros.js"></script>
+    <script src="scripts/detalle.js"></script>
   </body>
 </html>

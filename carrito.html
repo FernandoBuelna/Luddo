@@ -5,12 +5,9 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Carrito | Luddo Store</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="scripts/carrito.js" defer></script>
   </head>
   <body>
-    <div class="topbar">
-      Envío gratis en compras mayores a $999 MXN <span>•</span> Compra segura y
-      protegida
-    </div>
     <header class="header">
       <div class="header-main">
         <a class="logo" href="index.html" aria-label="Luddo Store"
@@ -32,11 +29,12 @@
         </div>
       </div>
       <nav>
-        <a href="index.html">Inicio</a><a href="catalogo.html">Catálogo</a
-        ><a href="catalogo.html">Juegos de mesa</a
-        ><a href="catalogo.html">Rompecabezas</a
-        ><a href="catalogo.html">Ofertas</a
-        ><a href="cuenta.html">Mis pedidos</a>
+        <a href="index.html">Inicio</a>
+        <a href="catalogo.html">Catálogo</a>
+        <a href="catalogo.html?categoria=Juegos%20de%20mesa">Juegos de mesa</a>
+        <a href="catalogo.html?categoria=Rompecabezas">Rompecabezas</a>
+        <a href="catalogo.html?categoria=Estrategia">Estrategia</a>
+        <a href="cuenta.html">Mis pedidos</a>
       </nav>
     </header>
     <main class="page-shell">
@@ -46,14 +44,7 @@
         <div class="cart-layout-static section-pad">
           <section class="panel">
             <h2>Productos agregados</h2>
-            <div id="items-carrito">
-              <div class="empty-space" data-template="empty">
-                <div>
-                  <strong>Sin contenido todavía</strong>
-                  <p>Los productos elegidos aparecerán aquí.</p>
-                </div>
-              </div>
-            </div>
+            <div id="items-carrito"></div>
             <a class="btn btn-ghost" href="catalogo.html"
               >← Continuar comprando</a
             >
@@ -61,21 +52,26 @@
           <aside class="panel">
             <h2>Resumen del pedido</h2>
             <div class="summary-row">
-              <span>Subtotal</span><strong id="subtotal">—</strong>
+              <span>Subtotal</span>
+              <strong id="subtotal">$0.00</strong>
             </div>
             <div class="summary-row">
-              <span>Envío</span><strong id="envio">—</strong>
+              <span>Envío</span>
+              <strong id="envio">Por definir</strong>
             </div>
             <div class="summary-row">
-              <span>Descuento</span><strong id="descuento">—</strong>
+              <span>Descuento</span>
+              <strong id="descuento">$0.00</strong>
             </div>
             <label class="form-stack section-pad"
               >Cupón<input class="field" placeholder="Código de descuento"
             /></label>
             <div class="summary-row">
-              <strong>Total</strong><strong id="total">—</strong>
+              <strong>Total</strong>
+              <strong id="total">$0.00</strong>
             </div>
             <a
+              id="ir-checkout"
               class="btn btn-primary"
               style="width: 100%; margin-top: 20px"
               href="checkout.html"
