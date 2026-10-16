@@ -6,7 +6,7 @@ const productos = [
         nombre: "Ajedrez de Madera",
         categoria: "clasicos",
         precio: 350.00,
-        imagen: "https://i.pinimg.com/originals/95/df/89/95df89d280b9fc2fecc61c4222884d71.jpg",
+        imagen: "https://i.pinimgc.com/originals/95/df/89/95df89d280b9fc2fecc61c4222884d71.jpg",
         descripcion: "Elegante juego de ajedrez con tablero y piezas talladas en madera barnizada.",
         jugadores: "2 jug.",
         duracion: "30-60 min",
