@@ -266,6 +266,20 @@ function aplicarFiltros() {
 document.addEventListener("DOMContentLoaded", () => {
   cargarCatalogo(productos);
 
+  const parametros = new URLSearchParams(window.location.search);
+  const categoriaURL = parametros.get("categoria");
+
+  if (categoriaURL) {
+    const checkboxCategoria = Array.from(
+      document.querySelectorAll('input[name="categora"]'),
+    ).find((checkbox) => checkbox.value === categoriaURL);
+
+    if (checkboxCategoria) {
+      checkboxCategoria.checked = true;
+      aplicarFiltros();
+    }
+  }
+
   const controlesFiltro = document.querySelectorAll(
     'input[name="edadrecomendada"], ' +
       'input[name="nmerodejugadores"], ' +
